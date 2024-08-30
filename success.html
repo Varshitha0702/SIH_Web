@@ -25,7 +25,7 @@
     <main class="main-content">
         <aside class="sidebar">
             <div class="profile">
-                <img src="https://1drv.ms/i/s!AkSOKL6pjyf7gQxhtAnjE_n4HkeU?e=O0T5Aj&width=800&height=800" alt="Profile Picture">
+                <img src="https://onedrive.live.com/embed?resid=771D3B3169BA2924%21713&authkey=%21ABYFdYMJDfuCvrI&width=800&height=800" alt="Profile Picture">
                 <h3>Harsh</h3>
                 <p>Class of 2027</p>
             </div>
@@ -46,6 +46,40 @@
                 <h2>Success Story Tracking</h2>
                 <p>Share and track the success stories of our alumni community. Submit your achievements or read about others here.</p>
             </article>
+
+            <!-- Success Stories Section -->
+            <section class="success-stories">
+                <div class="story-card">
+                    <div class="story-text">
+                        <p class="short-text">I recently had the opportunity to speak at a major tech conference where I shared insights on AI and machine learning...</p>
+                        <p class="full-text">I recently had the opportunity to speak at a major tech conference where I shared insights on AI and machine learning. It was an amazing experience to connect with industry leaders and share the stage with some of the best minds in the field.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                    <img src="https://via.placeholder.com/300" alt="Success Story Image" class="story-image">
+                </div>
+
+                <div class="story-card">
+                    <div class="story-text">
+                        <p class="short-text">I was recently promoted to Senior Manager at my company after leading a successful project...</p>
+                        <p class="full-text">I was recently promoted to Senior Manager at my company after leading a successful project that brought in new clients and significantly increased revenue. I'm thrilled to take on this new role and continue growing in my career.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                    <img src="https://via.placeholder.com/300" alt="Success Story Image" class="story-image">
+                </div>
+
+                <div class="story-card">
+                    <div class="story-text">
+                        <p class="short-text">I have been recognized as Employee of the Year at my organization for the third consecutive year...</p>
+                        <p class="full-text">I have been recognized as Employee of the Year at my organization for the third consecutive year. This achievement wouldn't have been possible without the support of my amazing team and the opportunities provided by my company to innovate and excel.</p>
+                        <a href="#" class="read-more">Read more</a>
+                    </div>
+                    <img src="https://via.placeholder.com/300" alt="Success Story Image" class="story-image">
+                </div>
+
+                <!-- Add more story cards as needed -->
+            </section>
+            <!-- End of Success Stories Section -->
+
         </section>
     </main>
 
@@ -56,6 +90,16 @@
     <script>
         document.getElementById('menu-toggle').addEventListener('click', function() {
             document.getElementById('menu').classList.toggle('active');
+        });
+
+        // Script to handle the "Read more" functionality
+        document.querySelectorAll('.read-more').forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const fullText = this.previousElementSibling;
+                fullText.style.display = 'inline';
+                this.style.display = 'none';
+            });
         });
     </script>
 </body>
